@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add SMTP Credentials</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background: #f7f7f7; }
+        form { background: #fff; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, select { width: 100%; padding: 10px; margin-bottom: 15px; }
+        button { background: #007bff; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <!-- navbar.php -->
+<nav style="background-color: #333; padding: 10px 20px;">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between;">
+        <li><a href="index.php" style="color: white; text-decoration: none; padding: 10px 15px;">Home</a></li>
+        <li><a href="select_config.php" style="color: white; text-decoration: none; padding: 10px 15px;">SMTP Configs</a></li>
+        <li><a href="edit_template.php" style="color: white; text-decoration: none; padding: 10px 15px;">Edit Template</a></li>
+        <li><a href="logout.php" style="color: white; text-decoration: none; padding: 10px 15px;">Logout</a></li>
+    </ul>
+</nav>
+
+<!-- sidebar.php -->
+<div style="width: 200px; background-color: #333; color: white; height: 100vh; position: fixed; top: 0; left: 0; padding: 20px;">
+    <h3>TP RESPONSE</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li><a href="index.php" style="color: white; text-decoration: none; display: block; padding: 10px;">Dashboard</a></li>
+        <li><a href="add_smtp_form.html" style="color: white; text-decoration: none; display: block; padding: 10px;">Add SMTP</a></li>
+        <li><a href="select_config.php" style="color: white; text-decoration: none; display: block; padding: 10px;">SMTP Configs</a></li>
+        <li><a href="edit_template.php" style="color: white; text-decoration: none; display: block; padding: 10px;">Edit Template</a></li>
+        <li><a href="logout.php" style="color: white; text-decoration: none; display: block; padding: 10px;">Logout</a></li>
+    </ul>
+</div>
+
+<form method="POST" action="add_smtp.php">
+    <h2>Add SMTP Credentials</h2>
+
+    <label>Name (e.g., AOL SMTP):</label>
+    <input type="text" name="name" required>
+
+    <label>Host:</label>
+    <input type="text" name="host" placeholder="smtp.example.com" required>
+
+    <label>Port:</label>
+    <input type="number" name="port" placeholder="465 or 587" required>
+
+    <label>Encryption:</label>
+    <select name="encryption" required>
+        <option value="">--Select--</option>
+        <option value="ssl">SSL</option>
+        <option value="tls">TLS</option>
+    </select>
+
+    <label>Username:</label>
+    <input type="email" name="username" required>
+
+    <label>Password:</label>
+    <input type="text" name="password" required>
+
+    <button type="submit">Save SMTP Config</button>
+</form>
+<footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
+    <p>&copy; 2025 Mailing SMTP Application</p>
+</footer>
+</body>
+</html>
