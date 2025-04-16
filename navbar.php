@@ -1,9 +1,62 @@
+<!-- Add this <style> block inside the <head> of your main layout or page -->
+<style>
+    .navbar {
+        background-color: #1f2937; /* dark gray */
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: sans-serif;
+    }
+
+    .navbar-container {
+        max-width: 1200px;
+        margin: 0 0 0 230px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 16px;
+    }
+
+    .navbar-link {
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .navbar-link:hover {
+        background-color: #374151; /* slightly lighter gray */
+        color: #d1d5db; /* light gray */
+    }
+
+    .logout-link {
+        color: #f87171; /* red */
+        font-weight: bold;
+    }
+
+    .logout-link:hover {
+        background-color: #dc2626;
+        color: white;
+    }
+</style>
+
 <!-- navbar.php -->
-<nav style="background-color: #333; padding: 10px 20px;">
-    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between;">
-        <li><a href="index.php" style="color: white; text-decoration: none; padding: 10px 15px;">Home</a></li>
-        <li><a href="select_config.php" style="color: white; text-decoration: none; padding: 10px 15px;">SMTP Configs</a></li>
-        <li><a href="edit_template.php" style="color: white; text-decoration: none; padding: 10px 15px;">Edit Template</a></li>
-        <li><a href="logout.php" style="color: white; text-decoration: none; padding: 10px 15px;">Logout</a></li>
-    </ul>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-links">
+            <a href="index.php" class="navbar-link">Home</a>
+            <a href="select_config.php" class="navbar-link">SMTP Configs</a>
+            <a href="edit_template.php" class="navbar-link">Edit Template</a>
+        </div>
+        <div>
+            <a href="logout.php" class="navbar-link logout-link">Logout</a>
+        </div>
+    </div>
 </nav>

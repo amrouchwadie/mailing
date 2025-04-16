@@ -35,7 +35,7 @@ if ($start_range < 1 || $end_range < $start_range) {
 
 // Calculate LIMIT/OFFSET
 $offset = $start_range - 1;
-$limit = min($end_range - $start_range + 1, 5);
+$limit = $end_range - $start_range + 1;
 
 // Debug: Log query parameters
 file_put_contents('query_debug.log', "email_list_id: $email_list_id, offset: $offset, limit: $limit\n", FILE_APPEND);
