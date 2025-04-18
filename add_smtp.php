@@ -1,5 +1,6 @@
 <?php
-require 'db.php'; // DB connection
+require 'config.php';
+redirectIfNotLoggedIn();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name       = $_POST['name'] ?? '';

@@ -1,9 +1,11 @@
 <?php
+require 'config.php';
+redirectIfNotLoggedIn();
 ob_start();
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
-require 'db.php';
+
 
 // Load email template
 $templatePath = 'template/Home Security.html';

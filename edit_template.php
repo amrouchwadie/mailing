@@ -1,4 +1,6 @@
 <?php
+require 'config.php';
+redirectIfNotLoggedIn();
 $templatePath = 'template/Home Security.html';
 $fromTitleField = 'from_title.txt';
 $subjectField = 'subject.txt';

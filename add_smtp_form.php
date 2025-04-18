@@ -1,3 +1,9 @@
+<?php
+require 'config.php';
+redirectIfNotLoggedIn();
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

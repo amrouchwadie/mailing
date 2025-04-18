@@ -59,8 +59,8 @@
 <div class="sidebar">
     <h3>TP Response</h3>
     <ul>
-        <li><a href="index.php">Dashboard</a></li>
-        <li><a href="add_smtp_form.html">Add SMTP</a></li>
+        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="add_smtp_form.php">Add SMTP</a></li>
         <li><a href="select_config.php">SMTP Configs</a></li>
         <li><a href="edit_template.php">Edit Template</a></li>
         <li><a href="upload_email_list.php">Upload Data</a></li>

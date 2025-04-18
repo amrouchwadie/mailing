@@ -1,5 +1,6 @@
 <?php
-require 'db.php';
+require 'config.php';
+redirectIfNotLoggedIn();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['email_list'])) {
     // Check if file is uploaded and valid
@@ -32,7 +33,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['email_list'])) {
 include 'navbar.php';
 include 'sidebar.php';
 ?>
-<div style="margin-left: 220px; padding: 20px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Data</title>
+</head>
+<body>
+<div style="margin-left: 220px; padding: 40px;">
 
 <form method="POST" enctype="multipart/form-data">
     <label for="list_name">List Name:</label>
@@ -45,3 +54,5 @@ include 'sidebar.php';
 </form>
 </div>
 <?php include 'footer.php'; ?>
+</body>
+</html>
