@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ");
         if ($stmt->execute([$name, $host, $port, $encryption, $username, $password])) {
             header("Location: select_config.php?added=1");
+            log_action($pdo, $_SESSION['user_id'], "smtp added", 'add_smtp.php');
             exit;
         } else {
             echo "❌ Failed to save credentials.";

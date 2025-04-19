@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+log_action($pdo, $_SESSION['user_id'], 'Viewed Select Config', 'select_config.php');
 redirectIfNotLoggedIn();
 ob_start();
 if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -26,11 +27,14 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM smtp_credentials");
     $stmt->execute();
     $smtpConfigs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
 } catch (PDOException $e) {
     $error = 'Database error: ' . $e->getMessage();
+    log_action($pdo, $_SESSION['user_id'], 'fetching error', 'select_config.php');
     $emailLists = [];
     $smtpConfigs = [];
 }
+
 ?>
 
 <!DOCTYPE html>

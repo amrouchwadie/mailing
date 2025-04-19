@@ -70,3 +70,15 @@ email_list_id: 1, offset: 299, limit: 100
 email_list_id: 1, offset: 0, limit: 99
 email_list_id: 1, offset: 0, limit: 99
 email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 5
+email_list_id: 2, offset: 0, limit: 5
+email_list_id: 2, offset: 0, limit: 5
+email_list_id: 2, offset: 0, limit: 99
+email_list_id: 1, offset: 98, limit: 101
+email_list_id: 2, offset: 98, limit: 101
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1

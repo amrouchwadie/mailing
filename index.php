@@ -3,7 +3,7 @@ ob_start();
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
-require 'db.php';
+require 'config.php';
 require __DIR__ . '/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -77,6 +77,7 @@ try {
         if (!$config) {
             ob_end_clean();
             header('Location: select_config.php?error=' . urlencode('SMTP configuration not found'));
+            log_action($pdo, $_SESSION['user_id'], 'Error SMTP SENDING', 'select_config.php');
             exit;
         }
 
@@ -101,6 +102,7 @@ try {
 
         ob_end_clean();
         header('Location: select_config.php?sent=1');
+        log_action($pdo, $_SESSION['user_id'], 'Successful SMTP sending', 'select_config.php');
         exit;
     } elseif ($send_method === 'gmail_api') {
         $client = new Google_Client();
@@ -125,6 +127,7 @@ try {
             $authUrl = $client->createAuthUrl();
             ob_end_clean();
             header('Location: ' . filter_var($authUrl, FILTER_SANITIZE_URL));
+            log_action($pdo, $_SESSION['user_id'], 'SUCCESS SENDING GMAIL API', 'select_config.php');
             exit;
         }
 
@@ -169,11 +172,13 @@ try {
 
         ob_end_clean();
         header('Location: select_config.php?sent=1');
+        log_action($pdo, $_SESSION['user_id'], 'Successful sending GMAIL API', 'select_config.php');
         exit;
     }
 } catch (Exception $e) {
     ob_end_clean();
     header('Location: select_config.php?error=' . urlencode($e->getMessage()));
+    log_action($pdo, $_SESSION['user_id'], 'Failure sending', 'select_config.php');
     exit;
 }
 ?>

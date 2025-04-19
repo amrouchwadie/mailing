@@ -53,6 +53,7 @@
         <div class="navbar-links">
             <a href="dashboard.php" class="navbar-link">Home</a>
             <a href="select_config.php" class="navbar-link">SMTP Configs</a>
+            <a href="logs.php" class="navbar-link">View Activity Logs</a>
             <a href="edit_template.php" class="navbar-link">Edit Template</a>
             <a href="#" class="navbar-link">Tools</a>
         </div>

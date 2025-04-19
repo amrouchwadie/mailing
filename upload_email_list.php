@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+log_action($pdo, $_SESSION['user_id'], "Upload Data Viewed", 'upload_email_list.php');
 redirectIfNotLoggedIn();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['email_list'])) {
@@ -21,10 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['email_list'])) {
         foreach ($emails as $email) {
             $stmt->execute([$emailListId, $email]);
         }
-
+        log_action($pdo, $_SESSION['user_id'], "success upload data", 'upload_email_list.php');
         echo "✅ Email list uploaded successfully!";
     } else {
         echo "❌ Error uploading file.";
+        log_action($pdo, $_SESSION['user_id'], "failed Upload Data", 'upload_email_list.php');
     }
 }
 ?>

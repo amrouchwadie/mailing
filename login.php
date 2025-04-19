@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         header("Location: dashboard.php");
+        log_action($pdo, $user['id'], 'Logged in');
         exit;
     } else {
         echo "Invalid credentials.";

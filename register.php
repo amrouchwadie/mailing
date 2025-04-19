@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $stmt->execute([$email, $password]);
         echo "Registered! <a href='login.php'>Login</a>";
+        log_action($pdo, $new_user_id, 'Registered account', 'register.php');
     } catch (PDOException $e) {
         echo "Error: E-mail already exists or password is lacking.";
     }

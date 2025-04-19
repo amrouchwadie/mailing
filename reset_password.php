@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("UPDATE users SET password = ?, reset_token = NULL, reset_expires = NULL WHERE id = ?");
         $stmt->execute([$newPassword, $user['id']]);
         echo "Password updated! <a href='login.php'>Login</a>";
+        log_action($pdo, $user_id, 'Reset password successfully', 'reset_password.php');
     } else {
         echo "Invalid or expired token.";
     }

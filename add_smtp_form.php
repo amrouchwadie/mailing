@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+log_action($pdo, $_SESSION['user_id'], "viewed smtp adding", 'add_smtp.php');
 redirectIfNotLoggedIn();
 
 

@@ -1,6 +1,9 @@
 <?php
 require 'config.php';
+log_action($pdo, $_SESSION['user_id'], 'Viewed dashboard', 'dashboard.php');
 redirectIfNotLoggedIn();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

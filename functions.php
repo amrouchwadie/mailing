@@ -13,4 +13,6 @@ function redirectIfNotLoggedIn() {
 function sanitize($data) {
     return htmlspecialchars(trim($data));
 }
+
+
 ?>
