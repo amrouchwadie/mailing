@@ -82,3 +82,26 @@ email_list_id: 2, offset: 0, limit: 1
 email_list_id: 2, offset: 0, limit: 1
 email_list_id: 2, offset: 0, limit: 1
 email_list_id: 2, offset: 0, limit: 1
+email_list_id: 1, offset: 0, limit: 1
+email_list_id: 1, offset: 0, limit: 99
+email_list_id: 1, offset: 0, limit: 99
+email_list_id: 1, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1
+email_list_id: 2, offset: 0, limit: 1 - Email sent via SMTP
+email_list_id: 2, offset: 0, limit: 1 - Email sent via SMTP
+email_list_id: 2, offset: 0, limit: 1 - Email sent via SMTP
+email_list_id: 2, offset: 0, limit: 1 - Email sent via SMTP
+email_list_id: 2, offset: 0, limit: 1 - Email sent via SMTP
+email_list_id: 2, offset: 0, limit: 1 - Email method unknown
+email_list_id: 2, offset: 0, limit: 1 - Email sent via Gmail API
+email_list_id: 2, offset: 0, limit: 1 - Email method unknown
+email_list_id: 2, offset: 0, limit: 1 - Email sent via SMTP
+email_list_id: 2, offset: 0, limit: 1 - Email sent via Gmail API

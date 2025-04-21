@@ -88,3 +88,57 @@ Exception: Client error: `POST https://www.googleapis.com/oauth2/v4/token` resul
   "error_description": "Bad Request"
 }
 
+Received code: 4/0Ab_5qllEeElWaRs6cRNIng03d4G3m5_KCwPDJwCjgEiRHmna577PU5yTfFIo8h3JZigApA
+Token response: Array
+(
+    [access_token] => ya29.a0AZYkNZi1HRdTWfT3ttBMO5TxsxaP0jd-F7Oc3uE8aGPw8ruYLn5sJ4XEh8dOk9XyCaHo4ni3Xb876hQP-aByWiGGpiQBkeRq6FkVupNnmnt4vmyTiCjIC_6H31JiOJ3fXYymD9TpMNnDsLR4FDByBr0KuBJ5R3q2LvmnBtbDaCgYKAdgSARMSFQHGX2Mihvy1bVe0EiDxN0qNwGvZ9A0175
+    [expires_in] => 3599
+    [refresh_token] => 1//03vP0mEfvRGTLCgYIARAAGAMSNwF-L9IrfQjXUOiI0L6zLhsbXy-Kf1VNE9jz0PLBMGlZNrL5HhXsU1K8hieqAKF84FzafaGBgOo
+    [scope] => https://www.googleapis.com/auth/gmail.send
+    [token_type] => Bearer
+    [created] => 1745236469
+)
+
+Received code: 4/0Ab_5qllEeElWaRs6cRNIng03d4G3m5_KCwPDJwCjgEiRHmna577PU5yTfFIo8h3JZigApA
+Exception: Client error: `POST https://www.googleapis.com/oauth2/v4/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+Received code: 4/0Ab_5qllESr3T9DfD_1VZGMMcqruv7Ve5Hoay1tM4A3OlNps3yLRZ2Q6lchsQWVq2ORSD0w
+Token response: Array
+(
+    [access_token] => ya29.a0AZYkNZjLdX8iGZY8rzPxGsg8kapapIGXymK6MiiTbvaD2euHP_mtuA5sT1mqW_QYDrCeou4vXFYv87yQHpQyPaf7vcpzwV-nieMYjUj8Vgg_u32t2EneYGulAqy7UJpl4DpSBcf-mJXCMjNe1lVyNEZcHKkLryVovMqln9AqaCgYKAZgSARYSFQHGX2MixgX1iu7LYYuw0u7Ip-z5FQ0175
+    [expires_in] => 3599
+    [refresh_token] => 1//03eH-IdApZCaUCgYIARAAGAMSNwF-L9IrXCCbGZ06en94it0xRF8NG15rRE2BGzKUpzU_U4ffUtLu-IYsQ0_Kla6hmP522hNzhBw
+    [scope] => https://www.googleapis.com/auth/gmail.send
+    [token_type] => Bearer
+    [created] => 1745243886
+)
+
+Received code: 4/0Ab_5qllESr3T9DfD_1VZGMMcqruv7Ve5Hoay1tM4A3OlNps3yLRZ2Q6lchsQWVq2ORSD0w
+Exception: Client error: `POST https://www.googleapis.com/oauth2/v4/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+Received code: 4/0Ab_5qll7o4P5Ypz4F8rRargOYB5lQff-CMaUH_S8tCXnZoYFpxP7PCPqYadUK-M8_oY7iA
+Token response: Array
+(
+    [access_token] => ya29.a0AZYkNZgST1xkC4ewcNb_V_TOC-u0zjRWgAV-IyscrvwTKbcJrqAwALEWe-2kh-U3Fc3ZzMxQhyf_WDvbREauKDJvRdMlHQzJZv7aSckUzxJAqaUXrqFf32-Hr1w2-3nHSL87bbr6aY1LoK3X4yxJkdyqqdn3BzwOwXO4kzQ8aCgYKAQESARcSFQHGX2MigjNspMxnp6xL102BxB2_hQ0175
+    [expires_in] => 3599
+    [refresh_token] => 1//03MleERbGhkDJCgYIARAAGAMSNwF-L9IrJgfzOQiOSFF5iaWL01OBKz-OruscDq51JSKZHetAKju05wkXAepD4ul10eGR9wc2y4A
+    [scope] => https://www.googleapis.com/auth/gmail.send
+    [token_type] => Bearer
+    [created] => 1745245660
+)
+
+Received code: 4/0Ab_5qll7o4P5Ypz4F8rRargOYB5lQff-CMaUH_S8tCXnZoYFpxP7PCPqYadUK-M8_oY7iA
+Exception: Client error: `POST https://www.googleapis.com/oauth2/v4/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
