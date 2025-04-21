@@ -38,8 +38,16 @@ $offset = $start_range - 1;
 $limit = $end_range - $start_range + 1;
 
 // Debug: Log query parameters
-file_put_contents('query_debug.log', "email_list_id: $email_list_id, offset: $offset, limit: $limit\n", FILE_APPEND);
-
+if (isset($send_method) && $send_method == 'smtp') {
+    // SMTP email sending method
+    file_put_contents('query_debug.log', "email_list_id: $email_list_id, offset: $offset, limit: $limit - Email sent via SMTP\n", FILE_APPEND);
+} elseif (isset($send_method) && $send_method === 'gmail_api') {
+    // Gmail API email sending method
+    file_put_contents('query_debug.log', "email_list_id: $email_list_id, offset: $offset, limit: $limit - Email sent via Gmail API\n", FILE_APPEND);
+} else {
+    // Default or error case
+    file_put_contents('query_debug.log', "email_list_id: $email_list_id, offset: $offset, limit: $limit - Email method unknown\n", FILE_APPEND);
+}
 try {
     // Get email list entries
     $stmt = $pdo->prepare("SELECT email FROM email_list_entries WHERE email_list_id = ? LIMIT ?, ?");

@@ -118,33 +118,8 @@ redirectIfNotLoggedIn();
     
 </head>
 <body>
-    <!-- navbar.php -->
-<!-- navbar.php -->
-<nav class="navbar">
-    <div class="navbar-container">
-        <div class="navbar-links">
-            <a href="index.php" class="navbar-link">Home</a>
-            <a href="select_config.php" class="navbar-link">SMTP Configs</a>
-            <a href="edit_template.php" class="navbar-link">Edit Template</a>
-        </div>
-        <div>
-            <a href="logout.php" class="navbar-link logout-link">Logout</a>
-        </div>
-    </div>
-</nav>
-
-<!-- sidebar.php -->
-<div class="sidebar">
-    <h3>TP Response</h3>
-    <ul>
-        <li><a href="index.php">Dashboard</a></li>
-        <li><a href="add_smtp_form.html">Add SMTP</a></li>
-        <li><a href="select_config.php">SMTP Configs</a></li>
-        <li><a href="edit_template.php">Edit Template</a></li>
-        <li><a href="upload_email_list.php">Upload Data</a></li>
-        <li><a href="logout.php" class="logout">Logout</a></li>
-    </ul>
-</div>
+<?php include 'navbar.php'; ?>
+<?php include 'sidebar.php'; ?>
 
 
 <form method="POST" action="add_smtp.php">
@@ -173,9 +148,7 @@ redirectIfNotLoggedIn();
     <input type="text" name="password" required>
 
     <button type="submit">Save SMTP Config</button>
-</form>
-<footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
-    <p>&copy; 2025 Mailing SMTP Application</p>
-</footer>
+</form><br>
+<?php include 'footer.php'; ?>
 </body>
 </html>
