@@ -1,7 +1,8 @@
 <?php
 require 'config.php';
-log_action($pdo, $_SESSION['user_id'], 'Viewed dashboard', 'dashboard.php');
 redirectIfNotLoggedIn();
+log_action($pdo, $_SESSION['user_id'], 'Viewed dashboard', 'dashboard.php');
+
 
 // Path to your query_debug.log file
 $log_file = 'query_debug.log';

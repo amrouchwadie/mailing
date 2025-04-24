@@ -1,7 +1,7 @@
 <?php
 require 'config.php';
-log_action($pdo, $_SESSION['user_id'], 'Viewed Select Config', 'select_config.php');
 redirectIfNotLoggedIn();
+log_action($pdo, $_SESSION['user_id'], 'Viewed Select Config', 'select_config.php');
 ob_start();
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();

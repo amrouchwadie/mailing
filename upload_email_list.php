@@ -1,7 +1,8 @@
 <?php
 require 'config.php';
-log_action($pdo, $_SESSION['user_id'], "Upload Data Viewed", 'upload_email_list.php');
 redirectIfNotLoggedIn();
+log_action($pdo, $_SESSION['user_id'], "Upload Data Viewed", 'upload_email_list.php');
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['email_list'])) {
     // Check if file is uploaded and valid
