@@ -131,7 +131,8 @@
 
 
         <!-- <h2>📋 Saved SMTP Configurations</h2> -->
-        <table>
+        <div style="overflow-x: auto;">
+        <table style="min-width: 900px;">
             <thead>
             <tr>
                 <th>ID</th>
@@ -186,6 +187,7 @@
             <?php endif; ?>
             </tbody>
         </table>
+        </div>
     </div>
     </div>
     </body>
